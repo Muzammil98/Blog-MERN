@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>GloB | Personal Blog Website</title>
+  </head>
+  <body>
+    <%- include('includes/navigation'); %>
+    <div class="container my-5  ">
+      <h1 class="display-4">Blogs</h1>
+      <ul class="list-group">
+        <% items.map((item) =>{ %>
+        <li class="list-group-item my-2">
+          <a href="/blog/<%=item._id %>"><%= item.title %></a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+    <%- include('includes/footer');%>
+  </body>
+</html>

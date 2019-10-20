@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>GloB | Add Blogs</title>
+  </head>
+  <body>
+    <%- include('includes/navigation'); %>
+    <div class="container my-4">
+      <h1 class="display-4">Add Blog</h1>
+      <form action="/blogs/add" method="POST">
+        <label for="title">Title</label>
+        <input type="text" name="title" required class="form-control" />
+        <label for="author">Author</label>
+        <input type="text" name="author" required class="form-control" />
+        <label for="body">Body</label>
+        <textarea name="body" required class="form-control"></textarea>
+        <input type="submit" value="Add" class="btn btn-primary my-2" />
+      </form>
+    </div>
+    <%- include('includes/footer');%>
+  </body>
+</html>
